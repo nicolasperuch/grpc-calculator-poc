@@ -1,0 +1,21 @@
+syntax = "proto3";
+package calculator;
+
+option java_package = "com.github.nicolasperuch";
+option java_multiple_files = true;
+
+message CalculatorRequest {
+    double firstNumber = 1;
+    double secondNumber = 2;
+}
+
+message CalculatorResponse {
+    double response = 1;
+}
+
+service CalculatorService {
+    rpc addition(CalculatorRequest) returns (CalculatorResponse) {};
+    rpc subtraction(CalculatorRequest) returns (CalculatorResponse) {};
+    rpc multiplication(CalculatorRequest) returns (CalculatorResponse) {};
+    rpc division(CalculatorRequest) returns (CalculatorResponse) {};
+}
