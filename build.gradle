@@ -3,7 +3,6 @@ plugins {
     id 'com.google.protobuf' version '0.8.10'
     id 'idea'
 }
-
 group 'com.github.nicolasperuch'
 version '1.0-SNAPSHOT'
 

@@ -28,5 +28,15 @@ public class CalculatorClient {
 										.build();
 		CalculatorResponse response = client.addition(request);
 		System.out.println("Response value: " + response.getResponse());
+
+
+		request = CalculatorRequest
+				.newBuilder()
+				.setFirstNumber(10)
+				.setSecondNumber(0)
+				.build();
+		response = client.division(request);
+		System.out.println("Response value: " + response.getResponse());
+
 	}
 }
